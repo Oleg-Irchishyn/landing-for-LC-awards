@@ -1,0 +1,102 @@
+.opening__section {
+    padding: 53px 0 0 0;
+    width: 100%;
+    max-width: 750px;
+    height: auto;
+    margin: 0 auto;
+    position: relative;
+    @include xs-devices {
+        max-width: 263px;
+    }
+    @include sm-devices {
+        max-width: 263px;
+    }
+    @include md-devices {
+       max-width: 555px;
+       padding: 53px 5px 0 5px;
+    }
+    .opening__section-video-wrapper {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-bottom: 66.7%;
+        margin: 0 0 15px 0;
+        overflow: hidden;
+        box-shadow: 0px 0px 12px -1px #d7d700;
+        border: transparent;
+        .opening__section-video-player {
+            display: block;
+            position: absolute;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    &-social {
+        position: relative;
+        border-bottom: 1px solid #424242;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 100%;
+        min-height: 54px;
+        @include sm-devices {
+            justify-content: space-between;
+         }
+         @include xs-devices {
+            justify-content: space-between;
+         }
+        .share {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                font-family: $font-main;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #fff;
+                width: 97px;
+                position: relative;
+                text-align: center;
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    outline: none;
+                }
+            }
+        }
+        .share__fb a {
+            margin: 0 44px 0 10px;
+            @include sm-devices {
+                margin: 0 0 0 20px;
+             }
+             @include xs-devices {
+                margin: 0 0 0 20px;
+             }
+        }
+        .share__fb a::before {
+            content: "";
+            position: absolute;
+            top: calc(0% - 2px);
+            left: calc(0% - 10px);
+            background: url("../../../images/svg/share_fb.svg");
+            width: 18px;
+            height: 18px;
+        }
+        .share__tw a::before {
+            content: "";
+            position: absolute;
+            top: calc(0% - 2px);
+            left: calc(0% - 13px);
+            background: url("../../../images/svg/share_twitter.svg");
+            width: 20px;
+            height: 18px;
+        }
+    }
+}

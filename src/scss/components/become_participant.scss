@@ -1,0 +1,302 @@
+.become-participant {
+    position: relative;
+    padding: 140px 0 0 0;
+    @include xs-devices {
+        padding: 100px 0 0 0;
+    }
+    @include sm-devices {
+        padding: 100px 0 0 0;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        @include xs-devices {
+            max-width: 263px !important;
+        }
+        @include sm-devices {
+            max-width: 263px !important;
+        }
+    }
+    &__title {
+        text-align: center;
+        font-family: $font-main;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 41px;
+        color: #fff;
+        margin: 0;
+    }
+    &__inner {
+        position: relative;
+        padding: 50px 0 0 0;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        @include xs-devices {
+            padding: 25px 0 0 0;
+        }
+        @include sm-devices {
+            padding: 25px 0 0 0;
+        }
+    }
+}
+
+.become-participant__inner form {
+    max-width: 750px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    @include xs-devices {
+        max-width: 100%;
+    }
+    @include sm-devices {
+        max-width: 100%;
+    }
+    @include md-devices {
+        max-width: 360px;
+    }
+    .form-group-wrapper {
+        padding: 0;
+        max-width: 360px;
+    }
+    .form-group-wrapper:last-of-type {
+        max-width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 2px 0 0 0;
+        @include xs-devices {
+            margin: 30px 0 0 0;
+        }
+        @include sm-devices {
+            margin: 30px 0 0 0;
+        }
+        @include md-devices {
+            margin: 30px 0 0 0;
+        }
+    }
+
+    .form-group.form-comments {
+        margin: 0;
+        width: 100%;
+        @include xs-devices {
+            margin: 30px 0 0 0;
+        }
+        @include sm-devices {
+            margin: 30px 0 0 0;
+        }
+        @include md-devices {
+            margin: 30px 0 0 0;
+        }
+        textarea.form-control {
+            padding: 15px;
+            resize: none;
+            max-width: 360px;
+            min-height: 287px;
+            @include xs-devices {
+                min-height: 282px;
+            }
+            @include sm-devices {
+                min-height: 282px;
+            }
+            @include md-devices {
+                min-height: 282px;
+            }
+        }
+    }
+
+    .form-group.form-field,
+    .form-group.form-comments {
+        margin: 0 0 30px 0;
+        label {
+            font-family: $font-main;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #cdcdcd;
+            margin: 0 0 5px 0;
+            sup {
+                color: #d7d700;
+                top: -2px;
+            }
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            min-height: 60px;
+            padding: 22px 15px 22px 15px;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #495057;
+            background-color: transparent;
+            border: 1px solid #424242;
+            border-radius: 0;
+            box-shadow: none;
+            color: #fff;
+            transition: 0.2s ease;
+            text-overflow: ellipsis;
+            cursor: pointer;
+            &:focus,
+            &:hover {
+                transition: 0.2s ease;
+                box-shadow: 0px 0px 8px rgba(215, 215, 0, 0.2);
+            }
+        }
+        .form-control::placeholder {
+            color: #424242;
+            transition: 0.2s ease;
+        }
+        .form-control:focus::placeholder {
+            opacity: 0;
+            transition: 0.2s ease;
+        }
+        .help-block {
+            display: none;
+            font-family: $font-main;
+            font-size: 12px;
+            line-height: 14px;
+            color: #ff0000;
+            margin: 10px 0 0 0;
+        }
+        &.has-error {
+            .help-block {
+                display: block;
+            }
+            .form-control {
+                border: 1px solid #ff0000;
+                box-shadow: none;
+                &:focus,
+                &:hover {
+                    box-shadow: none;
+                }
+            }
+        }
+    }
+    .form-group.form-field:last-of-type {
+        margin: 0;
+    }
+    .form-group.checkbox {
+        margin: 13px 0 0 0;
+        padding: 0;
+        @include xs-devices {
+            margin: 0 0 30px 0;
+        }
+        @include sm-devices {
+            margin: 0 0 30px 0;
+        }
+        @include md-devices {
+            margin: 0 0 30px 0;
+        }
+        label {
+            position: relative;
+            font-family: $font-main;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 16px;
+            color: #cdcdcd;
+            padding: 0 0 0 30px;
+            margin: 0;
+            transition: 0.2s;
+            cursor: pointer;
+            &:focus {
+                outline: none;
+            }
+            a {
+                position: relative;
+                color: inherit;
+                transition: 0.2s ease;
+                border-bottom: 1px solid #cdcdcd;
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: #cdcdcd;
+                    transition: 0.2s ease;
+                }
+            }
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        input[type="checkbox"] + label::before {
+            content: "";
+            position: absolute;
+            top: calc(0% - 3px);
+            left: 0;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #cdcdcd;
+            border-radius: 2px;
+            background: transparent;
+            transition: 0.2s;
+        }
+        input[type="checkbox"] + label:hover::before {
+            content: "\2713";
+            color: #fff;
+            transition: 0.2s;
+            font-size: 20px;
+            line-height: 19px;
+            border: 1px solid #d7d700;
+        }
+        input[type="checkbox"]:checked + label::before {
+            content: "\2713";
+            color: #fff;
+            border: 1px solid #d7d700;
+            border-radius: 2px;
+            background: transparent;
+            transition: 0.2s;
+            font-size: 20px;
+            line-height: 19px;
+            border: 1px solid #d7d700;
+        }
+        .help-block {
+            display: none;
+            font-family: $font-main;
+            font-size: 12px;
+            line-height: 14px;
+            color: #ff0000;
+            margin: 10px 0 0 0;
+        }
+        &.has-error {
+            .help-block {
+                display: block;
+            }
+        }
+    }
+    button,
+    .btn.btn-form {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        -webkit-appearance: none;
+        max-width: 180px;
+        min-width: 180px;
+        min-height: 60px;
+        background: #d7d700;
+        color: #070707;
+        cursor: pointer;
+        border: none;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        &:hover {
+            background: #efef00;
+        }
+        @include xs-devices {
+            max-width: 100%;
+            min-width: 100%;
+        }
+        @include sm-devices {
+            max-width: 100%;
+            min-width: 100%;
+        }
+        @include md-devices {
+            max-width: 100%;
+            min-width: 100%;
+        }
+    }
+}

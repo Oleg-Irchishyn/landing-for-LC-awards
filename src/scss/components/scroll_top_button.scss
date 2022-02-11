@@ -1,0 +1,34 @@
+.scroll_top_button {
+    position: relative;
+    padding: 0 0 50px 0;
+    @include xs-devices {
+        padding: 0 0 60px 0;
+    }
+    @include sm-devices {
+        padding: 0 0 60px 0;
+    }
+    .scroll_top_button__inner {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        .top_button {
+            width: 180px;
+            height: 60px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            border: 1px solid #424242;
+            span {
+                font-family: $font-main;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                text-align: center;
+                color: #fff;
+            }
+        }
+    }
+}

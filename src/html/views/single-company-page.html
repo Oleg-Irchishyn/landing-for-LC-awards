@@ -1,0 +1,15 @@
+<% var data = {
+    title: " Компания (название компании) и ее номинации на Login Casino Awards 2020"
+  }; %>
+  <%= _.template(require('./../includes/head.html').default)(data) %>
+  <body class="noselect awards-2020 single-company">
+    <%= _.template(require('./../includes/single-company-page/header.html').default)(data) %>
+    <%= _.template(require('./../includes/single-company-page/about_nominant.html').default)(data) %>
+    <%= _.template(require('./../includes/single-company-page/nominations_to_participate.html').default)(data) %>
+    <%= _.template(require('./../includes/single-company-page/partners.html').default)(data) %>
+    <%= _.template(require('./../includes/scroll_top_button.html').default)(data) %>
+    <%= _.template(require('./../includes/footer.html').default)(data) %>
+    <%= _.template(require('./../includes/modals/login_form.html').default)(data) %>
+    <%= _.template(require('./../includes/modals/registration_form.html').default)(data) %>
+    <%= _.template(require('./../includes/modals/thanks_modal.html').default)(data) %>
+    <%= _.template(require('./../includes/page_end.html').default)(data) %>

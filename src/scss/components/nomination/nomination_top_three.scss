@@ -1,0 +1,247 @@
+.nomination_top_three {
+    position: relative;
+    padding: 0 0 140px 0;
+    @include sm-devices {
+        padding: 0 0 100px 0;
+    }
+    @include xs-devices {
+        padding: 0 0 100px 0;
+    }
+    &__inner {
+        position: relative;
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+        .nomination_top_three__top-content {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-end;
+            overflow-y: hidden;
+            @include sm-devices {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                max-width: 263px;
+                margin: 0 auto;
+            }
+            @include xs-devices {
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+                max-width: 263px;
+                margin: 0 auto;
+            }
+            .nomination_top_three__title {
+                font-family: $font-main;
+                font-weight: 500;
+                font-size: 35px;
+                line-height: 41px;
+                text-align: left;
+                color: #ffffff;
+                margin: 0;
+                @include sm-devices {
+                    margin: 0 0 30px 0;
+                }
+                @include xs-devices {
+                    margin: 0 0 30px 0;
+                }
+            }
+            a {
+                display: block;
+                position: relative;
+                font-family: $font-main;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #fff;
+                padding: 0 30px 0 0;
+                &:hover,
+                &:focus {
+                    text-decoration: none;
+                    color: #fff;
+                    outline: none;
+                }
+            }
+            a::after {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 24px;
+                top: calc(0% - 4px);
+                right: 0;
+                background: url("../../../images/icons/small-arrow-right.svg") no-repeat center;
+            }
+        }
+        .nomination_top_three__nominants {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            width: 100%;
+            padding: 45px 0 0 0;
+            position: relative;
+            .nominant__card {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                align-items: flex-start;
+                max-width: 263px;
+                min-width: 263px;
+                min-height: 366px;
+                border: 1px solid #424242;
+                background: #070707;
+                padding: 25px;
+                margin: 0 29px 30px 0;
+                &-header {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    .header__image {
+                        width: 100%;
+                        position: relative;
+
+                        img {
+                            max-width: 100%;
+                            height: auto;
+                        }
+                    }
+                }
+                &-body {
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 15px 0 0 0;
+                    .body__descr {
+                        font-family: $font-main;
+                        font-weight: 400;
+                        font-size: 18px;
+                        line-height: 21px;
+                        text-align: center;
+                        margin: 0 0 15px 0;
+                        a {
+                            color: #fff;
+                            font-family: inherit;
+                            transition: 0.2s ease;
+                            &:hover {
+                                color: #d7d700;
+                                text-decoration: none;
+                                transition: 0.2s ease;
+                            }
+                        }
+                    }
+                    progress {
+                        background-color: #cdcdcd;
+                        border: 0;
+                        width: 100%;
+                        height: 2px;
+                        border-radius: 2px;
+                    }
+
+                    progress::-webkit-progress-bar {
+                        background-color: #cdcdcd;
+                        border-radius: 2px;
+                    }
+
+                    progress::-webkit-progress-value {
+                        background: #d7d700;
+                        border-radius: 2px;
+                    }
+
+                    progress::-moz-progress-bar {
+                        background: #d7d700;
+                        border-radius: 2px;
+                    }
+                    .progress-value {
+                        display: block;
+                        margin: 0;
+                        padding: 10px 0 0 0;
+                        font-family: $font-main;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 16px;
+                        text-align: center;
+                        color: #fff;
+                    }
+                }
+                &-footer {
+                    position: relative;
+                    display: flex;
+                    flex-wrap: wrap;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 15px 0 0 0;
+                    .thanks-message {
+                        font-family: $font-main;
+                        font-size: 14px;
+                        line-height: 16px;
+                        color: #fff;
+                        width: 100%;
+                        margin: 0;
+                        text-align: center;
+                    }
+                    .vote-btn {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-items: center;
+                        justify-content: center;
+                        background: #d7d700;
+                        max-width: 213px;
+                        min-width: 213px;
+                        min-height: 60px;
+                        font-family: $font-main;
+                        font-size: 14px;
+                        line-height: 16px;
+                        font-weight: 400;
+                        color: #070707;
+                        transition: 0.2 ease;
+                        &.disabled {
+                            pointer-events: none;
+                            opacity: 0.7;
+                        }
+                        &:hover {
+                            background: #efef00;
+                            transition: 0.2 ease;
+                        }
+                    }
+                }
+            }
+            .nominant__card:nth-child(3n) {
+                margin-right: 0;
+            }
+            @include xs-devices {
+                .nominant__card {
+                    margin-right: 0;
+                }
+                .nominant__card:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            @include sm-devices {
+                .nominant__card {
+                    margin-right: 0;
+                }
+                .nominant__card:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            @include md-devices {
+                .nominant__card:nth-child(2n) {
+                    margin-right: 0;
+                }
+            }
+            @include lg-devices {
+                .nominant__card:nth-child(3n) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}

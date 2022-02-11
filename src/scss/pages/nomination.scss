@@ -1,0 +1,26 @@
+@import "../components/nomination/nomination_companies";
+@import "../components/nomination/nomination_infoblock";
+@import "../components/nomination/nomination_top_three";
+
+body {
+    &.nominants {
+        background: url("../../images/backgrounds/nomination/nomination-bg-xl.jpg") no-repeat center;
+        background-size: cover;
+        @include lg-devices {
+            background: url("../../images/backgrounds/nomination/nomination-bg-lg.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+          @include md-devices {
+            background: url("../../images/backgrounds/nomination/nomination-bg-md.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+          @include sm-devices {
+            background: url("../../images/backgrounds/nomination/nomination-bg-sm.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+          @include xs-devices {
+            background: url("../../images/backgrounds/nomination/nomination-bg-sm.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+    }
+}

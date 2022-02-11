@@ -1,0 +1,15 @@
+<% var data = {
+    title: "Номинация (название номинации)"
+  }; %>
+  <%= _.template(require('./../includes/head.html').default)(data) %>
+  <body class="noselect awards-2020 nominants">
+    <%= _.template(require('./../includes/nomination/header.html').default)(data) %>
+    <%= _.template(require('./../includes/nomination/nomination_companies.html').default)(data) %>
+    <%= _.template(require('./../includes/nomination/nomination_infoblock.html').default)(data) %>
+     <%= _.template(require('./../includes/nomination/nomination_top_three.html').default)(data) %>
+    <%= _.template(require('./../includes/scroll_top_button.html').default)(data) %>
+    <%= _.template(require('./../includes/footer.html').default)(data) %>
+    <%= _.template(require('./../includes/modals/login_form.html').default)(data) %>
+    <%= _.template(require('./../includes/modals/registration_form.html').default)(data) %>
+    <%= _.template(require('./../includes/modals/thanks_modal.html').default)(data) %>
+    <%= _.template(require('./../includes/page_end.html').default)(data) %>

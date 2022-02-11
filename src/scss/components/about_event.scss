@@ -1,0 +1,161 @@
+.about_event {
+    position: relative;
+    padding: 140px 0 0 0;
+    overflow: hidden;
+    @include lg-devices {
+        padding: 140px 0 0 0;
+    }
+    @include md-devices {
+        padding: 140px 0 0 0;
+    }
+    @include sm-devices {
+        padding: 50px 0 0 0;
+    }
+    @include xs-devices {
+        padding: 50px 0 0 0;
+    }
+    &__inner {
+        position: relative;
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+            @include xs-devices {
+                max-width: 283px !important;
+                overflow-x: visible !important;
+            }
+            @include sm-devices {
+                max-width: 283px !important;
+                overflow-x: visible !important;
+            }
+            @include md-devices {
+                max-width: 575px !important;
+                overflow-x: visible !important;
+            }
+        }
+    }
+    &__content {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        @include xs-devices {
+            max-width: 263px;
+            margin: 0 auto;
+        }
+        @include sm-devices {
+            max-width: 263px;
+            margin: 0 auto;
+        }
+        @include md-devices {
+            max-width: 555px;
+            margin: 0 auto;
+        }
+        .about_event__title {
+            font-family: $font-main;
+            font-weight: 500;
+            font-size: 35px;
+            line-height: 41px;
+            text-align: left;
+            padding: 0;
+            @include xs-devices {
+                text-align: center;
+                margin: 30px 0 50px 0;
+            }
+            @include sm-devices {
+                text-align: center;
+                margin: 30px 0 50px 0;
+            }
+            @include md-devices {
+                text-align: center;
+                margin: 30px 0 50px 0;
+            }
+        }
+    }
+
+    &__content-body {
+        padding: 26px 0 0 0;
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 100%;
+        .content-body__image {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+            position: relative;
+            img {
+                max-width: 100%;
+                height: auto;
+                @include xl-devices {
+                    margin-top: -110px;
+                }
+            }
+        }
+        .content-body__info.infoblock {
+            height: 555px;
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            overflow: visible !important;
+            background: transparent;
+            width: 100%;
+            @include xs-devices {
+                height: 378px;
+            }
+            @include sm-devices {
+                height: 378px;
+            }
+            .info__text {
+                font-family: $font-main;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 21px;
+                color: #cdcdcd;
+            }
+            .info__header {
+                font-family: $font-main;
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 28px;
+                color: #fff;
+                margin: 30px 0 20px 0;
+            }
+            cursor: pointer;
+            .os-scrollbar.os-scrollbar-vertical {
+                left: calc(0% - 14px);
+                .os-scrollbar-track.os-scrollbar-track-off {
+                    background: #424242;
+                    width: 30%;
+                    .os-scrollbar-handle {
+                        min-height: 27.5%;
+                        background: #d7d700;
+                    }
+                }
+            }
+        }
+    }
+}
+.info-block-wrapper {
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+}
+.content-shadow {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    box-shadow: inset 0 -8px 8px -8px #070707, inset 0 10px 8px -8px #070707;
+}
+.content-shadow.top {
+    box-shadow: inset 0 140px 140px -80px #070707;
+}
+.content-shadow.bottom {
+    box-shadow: inset 0 -140px 140px -80px #070707;
+}

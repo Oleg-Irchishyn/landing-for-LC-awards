@@ -1,0 +1,58 @@
+// LIBS
+$fa-font-display: swap;
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/solid";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+@import "~bootstrap/scss/bootstrap";
+@import "../js/components/libs/slick-carousel/slick/slick.css";
+@import "../js/components/libs/animate.css/animate.min.css";
+@import "../js/components/libs/OverlayScrollbars/OverlayScrollbars.min.css";
+
+// VARIABLES AND MIXINS
+$font-stack: "Roboto", sans-serif;
+$font-main: "Roboto", sans-serif;
+
+@mixin xs-devices {
+  @media screen and (max-width: 575px) {
+    @content;
+  }
+}
+@mixin sm-devices {
+  @media screen and (min-width: 576px) and (max-width: 767px) {
+    @content;
+  }
+}
+@mixin md-devices {
+  @media screen and (min-width: 768px) and (max-width: 991px) {
+    @content;
+  }
+}
+@mixin lg-devices {
+  @media screen and (min-width: 992px) and (max-width: 1199px) {
+    @content;
+  }
+}
+@mixin xl-devices {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// COMPONENTS
+@import "./components/header";
+@import "./components/hero_screen";
+@import "./components/opening_section";
+@import "./components/about_event";
+@import "./components/participants";
+@import "./components/news";
+@import "./components/partners";
+@import "./components/become_participant";
+@import "./components/feedbacks";
+@import "./components/scroll_top_button";
+@import "./components/footer";
+@import "./components/modals/modals";
+
+// PAGES
+@import "./pages/main";
+@import "./pages/nomination";
+@import "./pages/single-company-page";

@@ -1,0 +1,74 @@
+.noselect {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+body {
+  font-family: $font-stack;
+  height: 100%;
+  font-size: 15px;
+  color: #fff;
+  line-height: 1.2;
+  background: url("../../images/backgrounds/background-xl.jpg") no-repeat center;
+  background-size: cover;
+  -webkit-font-smoothing: antialiased;
+  @include lg-devices {
+    background: url("../../images/backgrounds/background-lg.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+  @include md-devices {
+    background: url("../../images/backgrounds/background-md.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+  @include sm-devices {
+    background: url("../../images/backgrounds/background-sm.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+  @include xs-devices {
+    background: url("../../images/backgrounds/background-sm.jpg") no-repeat center;
+    background-size: 100% 100%;
+  }
+  &.awards-2020 {
+    overflow-x: hidden;
+    .container {
+      overflow-x: hidden;
+      @include xs-devices {
+        max-width: 320px;
+        padding: 0;
+      }
+      @include sm-devices {
+        max-width: 320px;
+        padding: 0;
+      }
+      @include md-devices {
+        max-width: 555px;
+        padding: 0;
+      }
+      @include lg-devices {
+        max-width: 848px;
+        padding: 0;
+      }
+    }
+    .container-fluid {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}

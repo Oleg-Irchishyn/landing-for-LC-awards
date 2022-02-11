@@ -1,0 +1,176 @@
+.nomination_infoblock {
+    position: relative;
+    padding: 0 0 110px 0;
+    @include lg-devices {
+        padding: 0 0 110px 0;
+    }
+    @include md-devices {
+        padding: 0 0 110px 0;
+    }
+    @include sm-devices {
+        padding: 0 0 100px 0;
+    }
+    @include xs-devices {
+        padding: 0 0 100px 0;
+    }
+    &__inner {
+        position: relative;
+        .container {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
+
+.nomination_infoblock__content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    @include lg-devices {
+        flex-direction: column;
+    }
+    @include md-devices {
+        flex-direction: column;
+    }
+    @include sm-devices {
+        flex-direction: column;
+    }
+    @include xs-devices {
+        flex-direction: column;
+    }
+    .content__item {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        position: relative;
+        width: 100%;
+        margin: 0 0 30px 0;
+        @include lg-devices {
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include md-devices {
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include sm-devices {
+            flex-direction: column;
+            justify-content: center;
+        }
+        @include xs-devices {
+            flex-direction: column;
+            justify-content: center;
+        }
+        .item__inner {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            .inner__text {
+                position: relative;
+                @include sm-devices {
+                    max-width: 263px;
+                    margin: 0 auto;
+                }
+                @include xs-devices {
+                    max-width: 263px;
+                    margin: 0 auto;
+                }
+                h2 {
+                    font-family: $font-main;
+                    font-weight: 500;
+                    font-size: 24px;
+                    line-height: 28px;
+                    color: #fff;
+                    text-align: left;
+                    margin: 0 0 20px 0;
+                }
+                h3 {
+                    font-family: $font-main;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #cdcdcd;
+                    margin: 0;
+                }
+            }
+            .inner__img {
+                position: relative;
+                max-width: 555px;
+                img {
+                    max-width: 100%;
+                    height: auto;
+                }
+            }
+        }
+        &.content__item-img {
+            .item__inner {
+                div:nth-of-type(1) {
+                    margin: 0 30px 0 0;
+                }
+                .inner__text {
+                    max-width: 555px;
+                    @include lg-devices {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                    @include md-devices {
+                        max-width: 100%;
+                        width: 100%;
+                    }
+                    @include sm-devices {
+                        max-width: 263px;
+                        width: 100%;
+                        margin: 0 auto !important;
+                    }
+                    @include xs-devices {
+                        max-width: 263px;
+                        width: 100%;
+                        margin: 0 auto !important;
+                    }
+                }
+                @include lg-devices {
+                    div:nth-of-type(1) {
+                        margin: 0;
+                    }
+                    .inner__img {
+                        margin: 0 auto 30px auto !important;
+                    }
+                }
+                @include md-devices {
+                    div:nth-of-type(1) {
+                        margin: 0;
+                    }
+                    .inner__img {
+                        max-width: 100%;
+                        width: 100%;
+                        margin: 0 0 30px 0 !important;
+                    }
+                }
+                @include sm-devices {
+                    div:nth-of-type(1) {
+                        margin: 0;
+                    }
+                    .inner__img {
+                        max-width: 100%;
+                        width: 100%;
+                        margin: 0 0 30px 0 !important;
+                    }
+                }
+                @include xs-devices {
+                    div:nth-of-type(1) {
+                        margin: 0;
+                    }
+                    .inner__img {
+                        max-width: 100%;
+                        width: 100%;
+                        margin: 0 0 30px 0 !important;
+                    }
+                }
+            }
+        }
+    }
+    .content__item:last-of-type {
+        margin: 0;
+    }
+}

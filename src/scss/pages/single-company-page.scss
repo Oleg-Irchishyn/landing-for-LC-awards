@@ -1,0 +1,25 @@
+@import "../components/single-company-page/about_nominant";
+@import "../components/single-company-page/nominations_to_participate";
+
+body {
+    &.single-company {
+        background: url("../../images/backgrounds/single-company-page/nominant-bg-xl.jpg") no-repeat center;
+        background-size: cover;
+        @include lg-devices {
+            background: url("../../images/backgrounds/single-company-page/nominant-bg-lg.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+          @include md-devices {
+            background: url("../../images/backgrounds/single-company-page/nominant-bg-md.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+          @include sm-devices {
+            background: url("../../images/backgrounds/single-company-page/nominant-bg-sm.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+          @include xs-devices {
+            background: url("../../images/backgrounds/single-company-page/nominant-bg-sm.jpg") no-repeat center;
+            background-size: 100% 100%;
+          }
+    }
+}

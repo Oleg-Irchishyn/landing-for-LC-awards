@@ -1,0 +1,362 @@
+.login-modal,
+.registration-modal,
+.thanks-modal {
+    .modal-dialog {
+        max-width: 454px;
+        margin: 245px auto;
+        .modal-content {
+            position: relative;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            width: 100%;
+            background-color: #070707;
+            border: transparent;
+            border-radius: 2px;
+            outline: 0;
+            box-shadow: 0px 0px 12px -1px rgba(215, 215, 0, 1);
+            .modal-header {
+                position: relative;
+                border: none;
+                border-radius: 0;
+                align-items: center;
+                justify-content: center;
+                padding: 30px 0 0 0;
+                .modal-title {
+                    font-family: $font-main;
+                    font-weight: 500;
+                    font-size: 35px;
+                    line-height: 41px;
+                    color: #fff;
+                }
+                .close {
+                    position: absolute;
+                    right: calc(0% + 20px);
+                    top: calc(0% + 18px);
+                    padding: 20px;
+                    margin: 0;
+                    color: #cdcdcd;
+                    float: none;
+                    text-shadow: none;
+                    @media (max-width: 575px) {
+                        right: calc(0% + 5px);
+                        top: calc(0% + 10px);
+                    }
+                }
+                .close::before {
+                    content: "";
+                    position: absolute;
+                    left: calc(0% + 10px);
+                    top: calc(0% + 10px);
+                    height: 1px;
+                    width: 25px;
+                    background: #cdcdcd;
+                    transform: rotate(-45deg);
+                }
+                .close::after {
+                    content: "";
+                    position: absolute;
+                    top: calc(0% + 10px);
+                    right: calc(0% + 5px);
+                    height: 1px;
+                    width: 25px;
+                    background: #cdcdcd;
+                    transform: rotate(-135deg);
+                }
+            }
+            .modal-body {
+                padding: 30px;
+                form,
+                form.login-form,
+                .registration-form {
+                    .form-group.form-field {
+                        margin: 0 0 30px 0;
+                        label {
+                            font-family: $font-main;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #cdcdcd;
+                            margin: 0 0 5px 0;
+                            sup {
+                                color: #d7d700;
+                                top: -2px;
+                            }
+                        }
+                        .form-control {
+                            display: block;
+                            width: 100%;
+                            min-height: 60px;
+                            padding: 22px 15px 22px 15px;
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 1.5;
+                            color: #495057;
+                            background-color: transparent;
+                            border: 1px solid #424242;
+                            border-radius: 0;
+                            box-shadow: none;
+                            color: #fff;
+                            transition: 0.2s ease;
+                            text-overflow: ellipsis;
+                            cursor: pointer;
+                            &:focus,
+                            &:hover {
+                                transition: 0.2s ease;
+                                box-shadow: 0px 0px 8px rgba(215, 215, 0, 0.2);
+                            }
+                        }
+                        .form-control::placeholder {
+                            color: #424242;
+                            transition: 0.2s ease;
+                        }
+                        .form-control:focus::placeholder {
+                            opacity: 0;
+                            transition: 0.2s ease;
+                        }
+                        .help-block {
+                            display: none;
+                            font-family: $font-main;
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #ff0000;
+                            margin: 10px 0 0 0;
+                        }
+                        &.has-error {
+                            margin: 0 0 10px 0;
+                            .help-block {
+                                display: block;
+                            }
+                            .form-control {
+                                border: 1px solid #ff0000;
+                                box-shadow: none;
+                                &:focus,
+                                &:hover {
+                                    box-shadow: none;
+                                }
+                            }
+                        }
+                    }
+                    .form-group.form-field:last-of-type {
+                        margin: 0;
+                    }
+                    .form-group.checkbox {
+                        margin: 30px 0 0 0;
+                        label {
+                            position: relative;
+                            font-family: $font-main;
+                            font-weight: 400;
+                            font-size: 14px;
+                            line-height: 16px;
+                            color: #cdcdcd;
+                            padding: 0 0 0 30px;
+                            margin: 0;
+                            transition: 0.2s;
+                            cursor: pointer;
+                            &:focus {
+                                outline: none;
+                            }
+                        }
+                        input[type="checkbox"] {
+                            display: none;
+                        }
+                        input[type="checkbox"] + label::before {
+                            content: "";
+                            position: absolute;
+                            top: calc(0% - 3px);
+                            left: 0;
+                            width: 20px;
+                            height: 20px;
+                            border: 1px solid #d7d700;
+                            border-radius: 2px;
+                            background: transparent;
+                            transition: 0.2s;
+                        }
+                        input[type="checkbox"] + label:hover::before {
+                            content: "\2713";
+                            color: #fff;
+                            transition: 0.2s;
+                            font-size: 20px;
+                            line-height: 19px;
+                        }
+                        input[type="checkbox"]:checked + label::before {
+                            content: "\2713";
+                            color: #fff;
+                            border: 1px solid #d7d700;
+                            border-radius: 2px;
+                            background: transparent;
+                            transition: 0.2s;
+                            font-size: 20px;
+                            line-height: 19px;
+                        }
+                        .help-block {
+                            display: none;
+                            font-family: $font-main;
+                            font-size: 12px;
+                            line-height: 14px;
+                            color: #ff0000;
+                            margin: 10px 0 0 0;
+                        }
+                        &.has-error {
+                            .help-block {
+                                display: block;
+                            }
+                        }
+                    }
+                    button,
+                    .btn.btn-form {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        -webkit-appearance: none;
+                        max-width: 100%;
+                        width: 100%;
+                        min-height: 60px;
+                        background: #d7d700;
+                        color: #070707;
+                        cursor: pointer;
+                        border: none;
+                        border-radius: 0;
+                        margin: 32px 0 0 0;
+                        &:hover {
+                            background: #efef00;
+                        }
+                    }
+                }
+            }
+            .modal-footer {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: flex-start;
+                padding: 0 0 30px 30px;
+                border: none;
+                border-radius: 0;
+                span,
+                .registration {
+                    font-family: $font-main;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 16px;
+                    display: flex;
+                    align-items: center;
+                    color: #cdcdcd;
+                    a {
+                        color: #d7d700;
+                        cursor: pointer;
+                        text-decoration: none;
+                        margin: 0 0 0 3px;
+                        position: relative;
+                        &:hover {
+                            color: #d7d700;
+                            text-decoration: none;
+                        }
+                        &:focus {
+                            outline: none;
+                        }
+                    }
+                }
+                a::after {
+                    content: "";
+                    width: 100%;
+                    height: 1px;
+                    bottom: 0;
+                    position: absolute;
+                    background: #d7d700;
+                    left: 0;
+                }
+            }
+        }
+    }
+}
+.registration-modal {
+    .modal-dialog {
+        .modal-content {
+            .modal-body {
+                form {
+                    .form-group.checkbox.registration {
+                        margin: 30px 0 0 0;
+                        label {
+                            a {
+                                position: relative;
+                                color: inherit;
+                                transition: 0.2s ease;
+                                border-bottom: 1px solid #cdcdcd;
+                                &:hover,
+                                &:focus {
+                                    text-decoration: none;
+                                    color: #cdcdcd;
+                                    transition: 0.2s ease;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.thanks-modal .modal-dialog {
+    max-width: 320px;
+    .modal-content {
+        .modal-header {
+            .modal-title {
+                font-family: $font-main;
+                font-weight: 500;
+                font-size: 18px;
+                line-height: 21px;
+            }
+            .close {
+                right: calc(0% + 5px);
+                top: calc(0% + 10px);
+            }
+        }
+        .modal-body {
+            padding: 20px 8px 40px 8px;
+            .body__message {
+                font-family: $font-main;
+                font-weight: 400;
+                font-size: 14px;
+                line-height: 16px;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (min-width: 576px) {
+    .login-modal,
+    .registration-modal {
+        .modal-dialog {
+            max-width: 454px;
+            margin: 245px auto;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .login-modal,
+    .registration-modal {
+        .modal-dialog {
+            max-width: 300px;
+            margin: 147px auto;
+            .modal-content {
+                .modal-footer {
+                    justify-content: center;
+                    padding-right: 30px;
+                    span,
+                    .registration {
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        text-align: center;
+                        a {
+                            margin: 3px 0 0 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

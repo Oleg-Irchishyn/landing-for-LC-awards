@@ -1,0 +1,204 @@
+.feedbacks {
+    padding: 108px 0 172px 0;
+    position: relative;
+    @include xs-devices {
+        padding: 100px 0 100px 0;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        @include xs-devices {
+            max-width: 263px !important;
+        }
+        @include sm-devices {
+            max-width: 263px !important;
+        }
+    }
+    .feedbacks__content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        max-width: 750px;
+        min-height: 388px;
+        width: 100%;
+        margin: 0 auto;
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+        @include md-devices {
+            margin: 0;
+            max-width: 100%;
+        }
+        @include sm-devices {
+            margin: 0;
+            max-width: 100%;
+            min-height: 436px;
+            overflow: hidden;
+        }
+        @include xs-devices {
+            margin: 0;
+            max-width: 100%;
+            min-height: 436px;
+            overflow: hidden;
+        }
+
+        .feedbacks-slider-prev-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            background: #d7d700;
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            cursor: pointer;
+            &.slick-disabled {
+                opacity: 0.7;
+                pointer-events: none;
+            }
+        }
+        .feedbacks-slider-next-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            width: 40px;
+            height: 50px;
+            background: #d7d700;
+            right: calc(0% - 40px);
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5;
+            cursor: pointer;
+            &.slick-disabled {
+                opacity: 0.7;
+                pointer-events: none;
+            }
+        }
+        &-slider {
+            position: relative;
+            max-width: 750px;
+            width: 100%;
+            border: 1px solid #424242;
+            background: #070707;
+            @include md-devices {
+                max-width: 100%;
+            }
+            @include sm-devices {
+                max-width: 100%;
+            }
+            @include xs-devices {
+                max-width: 100%;
+            }
+            .slider__item {
+                position: relative;
+                padding: 72px 112px 46px 112px;
+                @include md-devices {
+                    padding: 72px 30px 47px 30px;
+                }
+                @include sm-devices {
+                    padding: 52px 10px 15px 10px;
+                }
+                @include xs-devices {
+                    padding: 52px 10px 15px 10px;
+                }
+                .message {
+                    position: relative;
+                    padding: 0 0 30px 0;
+                    font-family: $font-main;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #cdcdcd;
+                    margin: 0;
+                }
+                .message::before {
+                    content: "";
+                    position: absolute;
+                    top: calc(0% - 25px);
+                    left: calc(0% - 30px);
+                    background: url("../../images/icons/quotes.svg") no-repeat center;
+                    width: 26px;
+                    height: 21px;
+                    @include xs-devices {
+                        top: calc(0% - 35px);
+                        left: calc(0% + 13px);
+                    }
+                    @include sm-devices {
+                        top: calc(0% - 35px);
+                        left: calc(0% + 13px);
+                    }
+                    @include md-devices {
+                        top: calc(0% - 35px);
+                        left: calc(0% - 10px);
+                    }
+                }
+                .author {
+                    display: block;
+                    font-family: $font-main;
+                    font-weight: 500;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #fff;
+                    margin: 0 0 5px 0;
+                }
+                .company {
+                    display: block;
+                    margin: 0;
+                    font-family: $font-main;
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 21px;
+                    color: #d7d700;
+                    text-transform: uppercase;
+                }
+            }
+            .slick-dots {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: calc(0% - 40px);
+                width: 100%;
+                padding: 0;
+                margin: 0;
+                list-style-type: none;
+                cursor: pointer;
+                z-index: 5;
+                background: #070707;
+                min-height: 32px;
+                li {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    border: 1px solid #424242;
+                    margin: 0 10px 0 0;
+                    width: 12px;
+                    height: 12px;
+                    &.slick-active {
+                        button {
+                            background: #d7d700;
+                        }
+                    }
+                    button {
+                        padding: 0;
+                        font-family: none;
+                        font-size: 0;
+                        width: 60%;
+                        height: 60%;
+                    }
+                }
+                li:last-of-type {
+                    margin: 0;
+                }
+            }
+        }
+    }
+    .feedbacks__content::-webkit-scrollbar {
+        display: none;
+    }
+}

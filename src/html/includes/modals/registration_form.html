@@ -1,0 +1,57 @@
+<div class="modal fade registration-modal" id="registrationModal" tabindex="-1" role="dialog" aria-labelledby="registrationModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="registrationModalLabel">Регистрация</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="registration-form" action="" class="registration-form" method="post">
+                    <div class="form-group form-field">
+                        <label for="RegistrationForm_name" class="pull-left">Имя<sup>*</sup>
+                        </label>
+                        <input placeholder="Введите Ваше имя" class="form-control" name="RegistrationForm[name]" id="RegistrationForm_name" type="text" autocomplete="off">
+                        <div class="help-block" id="RegistrationForm_name_em_">
+                            <span>Необходимо заполнить «Имя»</span>
+                        </div>
+                    </div>
+                    <div class="form-group form-field has-error">
+                        <label for="RegistrationForm_email" class="pull-left">Email<sup>*</sup>
+                        </label>
+                        <input placeholder="Введите Ваш e-mail адресс" class="form-control" name="RegistrationForm[email]" id="RegistrationForm_email" type="text" autocomplete="off">
+                        <div class="help-block" id="RegistrationForm_email_em_">
+                            <span>Необходимо заполнить «Эл.почта»</span>
+                        </div>
+                    </div>
+                    <div class="form-group form-field">
+                        <label for="RegistrationForm_password" class="pull-left">Пароль<sup>*</sup>
+                        </label>
+                        <input placeholder="Введите Ваш пароль" class="form-control" name="RegistrationForm[password]" id="RegistrationForm_password" type="password" autocomplete="off">
+                        <div class="help-block" id="RegistrationForm_password_em_">
+                            <span>Необходимо заполнить «Пароль»</span>
+                        </div>
+                    </div>
+                    <div class="form-group form-field">
+                        <label for="RegistrationForm_password_again" class="pull-left">Еще раз пароль<sup>*</sup>
+                        </label>
+                        <input placeholder="Повторите пароль" class="form-control" name="RegistrationForm[password_again]" id="RegistrationForm_password_again" type="password" autocomplete="off">
+                        <div class="help-block" id="RegistrationForm_password_em_">
+                            <span>Необходимо заполнить повторно «Пароль»</span>
+                        </div>
+                    </div>
+                    <div class="form-group checkbox registration">
+                        <input class="checkbox" name="RegistrationForm[confirmPpd]" id="RegistrationForm_confirmPpd" type="checkbox"/>
+                        <label for="RegistrationForm_confirmPpd" class="confirm">
+                            <span>Регистрируясь на сайте, вы соглашаетесь на обработку своих</span>
+                            <a href="https://logincasino.com/politica-konfidencialnosti" title="personal data" target="_blank" rel="nofollow">персональных данных</a>
+                        </label>
+                        <div class="help-block" id="RegistrationForm_confirmPpd_em_">
+                            <span>Нажмите на чекбокс</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-form">Зарегистрироваться</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

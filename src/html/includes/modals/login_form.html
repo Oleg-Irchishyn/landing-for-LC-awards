@@ -1,0 +1,42 @@
+<div class="modal fade login-modal" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="loginModalLabel">Вход</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="login-form" action="" class="login-form" method="post">
+                    <div class="form-group form-field has-error">
+                        <label for="LoginForm_email" class="pull-left">Email<sup>*</sup>
+                        </label>
+                        <input placeholder="Введите Ваш e-mail адресс" class="form-control" name="LoginForm[email]" id="LoginForm_email" type="text" autocomplete="off">
+                        <div class="help-block" id="LoginFormForm_email_em_">
+                            <span>Необходимо заполнить «Эл.почта»</span>
+                        </div>
+                    </div>
+                    <div class="form-group form-field">
+                        <label for="LoginForm_password" class="pull-left">Пароль<sup>*</sup>
+                        </label>
+                        <input placeholder="Введите Ваш пароль" class="form-control" name="LoginForm[password]" id="LoginForm_password" type="password" autocomplete="off">
+                        <div class="help-block" id="LoginForm_password_em_">
+                            <span>Необходимо заполнить «Пароль»</span>
+                        </div>
+                    </div>
+                    <div class="form-group checkbox">
+                        <input class="checkbox" name="LoginForm[confirmPpd]" id="LoginForm_confirmPpd" type="checkbox"/>
+                        <label for="LoginForm_confirmPpd" class="confirm">Запомнить свои данные</label>
+                        <div class="help-block" id="LoginForm_confirmPpd_em_">
+                            <span>Нажмите на чекбокс</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-form">Войти</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <div>
+                    <span class="registration">Еще не зарегистрированы? <a data-toggle="modal" data-target="#registrationModal">Пройти регистрацию</a></span></div>
+            </div>
+        </div>
+    </div>
+</div>

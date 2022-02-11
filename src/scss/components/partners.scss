@@ -1,0 +1,291 @@
+.partners {
+    padding: 140px 0 0 0;
+    position: relative;
+    &.single-company-partners {
+        padding: 0 0 140px 0;
+    }
+    .container {
+        padding-left: 0;
+        padding-right: 0;
+        @include xs-devices {
+            max-width: 263px !important;
+        }
+        @include sm-devices {
+            max-width: 263px !important;
+        }
+    }
+    &__title {
+        font-family: $font-main;
+        text-align: left;
+        font-weight: 500;
+        font-size: 35px;
+        line-height: 41px;
+        color: #fff;
+        margin: 0;
+        padding: 0 0 50px 0;
+        white-space: nowrap;
+    }
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        border: 1px solid #424242;
+        border-left: none;
+        @include md-devices {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+        @include sm-devices {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+        @include xs-devices {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: none;
+        }
+        .partners__content-slider-controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            padding: 0;
+            border-right: 1px solid #424242;
+            @include md-devices {
+                order: 2;
+                border-right: none;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                overflow: hidden;
+                padding: 30px 0 0 0;
+            }
+            @include sm-devices {
+                order: 2;
+                border-right: none;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                overflow: hidden;
+                padding: 30px 0 0 0;
+            }
+            @include xs-devices {
+                order: 2;
+                border-right: none;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: wrap;
+                overflow: hidden;
+                padding: 30px 0 0 0;
+            }
+            .slider__pagination {
+                display: flex;
+                flex-wrap: nowrap;
+                align-items: flex-start;
+                justify-content: flex-start;
+                padding: 50px 0 0 0;
+                width: 100%;
+                @include md-devices {
+                    width: initial;
+                    padding: 0;
+                }
+                @include sm-devices {
+                    width: initial;
+                    padding: 0;
+                }
+                @include xs-devices {
+                    width: initial;
+                    padding: 0;
+                }
+                .pagination-current__slide {
+                    font-family: $font-main;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 1;
+                    color: #fff;
+                    margin: 0;
+                }
+                .pagintaion-total__slides {
+                    font-family: $font-main;
+                    font-weight: 400;
+                    font-size: 24px;
+                    line-height: 1;
+                    color: #d7d700;
+                    margin: 0;
+                }
+            }
+            .slider-prev-arrow.slick-arrow {
+                transform: rotate(180deg);
+                color: #424242;
+                transition: 0.2s ease;
+                font-size: 36px;
+                max-height: 43px;
+                line-height: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: flex-start;
+                align-self: flex-start;
+                margin: 0 70px 0 0;
+                cursor: pointer;
+                transition: 0.2s ease;
+                @include md-devices {
+                    margin: 0;
+                }
+                @include sm-devices {
+                    margin: 0;
+                }
+                @include xs-devices {
+                    margin: 0;
+                }
+                &:hover {
+                    color: #d7d700;
+                    transition: 0.2s ease;
+                }
+                &.active-arrow {
+                    color: #d7d700;
+                    transition: 0.2s ease;
+                    outline: none;
+                    font-size: 65px;
+                    transform: translate(0, 10px) rotate(180deg);
+                    transition: 0.2s ease;
+                }
+                &.slick-disabled {
+                    opacity: 0.7;
+                    pointer-events: none;
+                    color: #424242;
+                    font-size: 36px;
+                    transform: translate(0, 0px) rotate(180deg);
+                }
+            }
+            .slider-next-arrow.slick-arrow {
+                color: #424242;
+                transition: 0.2s ease;
+                font-size: 36px;
+                max-height: 43px;
+                line-height: 1;
+                display: flex;
+                flex-wrap: wrap;
+                align-self: flex-start;
+                align-items: flex-start;
+                transform: translate(0, -4px);
+                transition: 0.2s ease;
+                cursor: pointer;
+                &:hover {
+                    color: #d7d700;
+                    transition: 0.2s ease;
+                }
+                &.active-arrow {
+                    color: #d7d700;
+                    transition: 0.2s ease;
+                    outline: none;
+                    font-size: 65px;
+                    transform: translate(0, -21px);
+                    transition: 0.2s ease;
+                }
+                &.slick-disabled {
+                    opacity: 0.7;
+                    pointer-events: none;
+                    color: #424242;
+                    font-size: 36px;
+                    transform: translate(0, -3px);
+                }
+            }
+        }
+    }
+}
+
+.partners__content-slider {
+    position: relative;
+    padding: 0;
+    @include md-devices {
+        order: 1;
+        border: 1px solid #424242;
+    }
+    @include sm-devices {
+        order: 1;
+        border: 1px solid #424242;
+    }
+    @include xs-devices {
+        order: 1;
+        border: 1px solid #424242;
+    }
+    &.slick-slider {
+        .slick-dots {
+            display: none !important;
+        }
+    }
+    .slider__card {
+        position: relative;
+        padding: 15px;
+        &:focus,
+        &:hover {
+            outline: none;
+            text-decoration: none;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        @include sm-devices {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            width: 100% !important;
+        }
+        @include xs-devices {
+            display: flex !important;
+            justify-content: center;
+            align-items: center;
+            width: 100% !important;
+        }
+    }
+    .slider__card::after {
+        content: "";
+        position: absolute;
+        width: 1px;
+        height: 103%;
+        top: 0;
+        right: 0;
+        background: #424242;
+        @include sm-devices {
+            display: none;
+        }
+        @include xs-devices {
+            display: none;
+        }
+    }
+    .slider__card:nth-child(4n)::after {
+        content: "";
+        display: none;
+    }
+    @include lg-devices {
+        .slider__card:nth-child(3n)::after {
+            content: "";
+            display: none;
+        }
+    }
+    @include md-devices {
+        .slider__card:nth-child(2n)::after {
+            content: "";
+            display: none;
+        }
+    }
+}
+
+.partners__content-slider::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #424242;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+}
